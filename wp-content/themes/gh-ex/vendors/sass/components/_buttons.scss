@@ -1,0 +1,25 @@
+.btn {
+  &-read-more {
+    background-color: gray;
+    color: #2c2c2b;
+    font: 300 14px/14px Oswald;
+    border: none;
+    padding: 7px 44px 7px 12px;
+    @include border-radius(0px);
+    position: relative;
+    &:focus {
+      text-decoration: none;
+      color: #2c2c2b;
+      outline: none;
+    }
+    &:hover {
+      text-decoration: none;
+      color: #2c2c2b;
+    }
+  }
+}
+
+.btn-contact-send {
+  padding: 11px 55px 11px 12px;
+  text-transform: uppercase;
+}

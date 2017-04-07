@@ -1,0 +1,51 @@
+.site {
+  &-footer {
+    background-color: $black;
+    margin-top: 2%;
+    padding: 20px 0 5px 0;
+    &-wrap {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.footer {
+  &-copyright {
+    color: $white;
+    font: 700 12px Arial;
+    display: flex;
+    align-items: center;
+  }
+  &-social {
+    background-color: #e2e2e2;
+    opacity: 0.84;
+    width: 33px;
+    height: 33px;
+    position: relative;
+    &:hover {
+      background-color: #1b1b1a;
+    }
+    .fa {
+      padding: 5px;
+    }
+    &-list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li {
+        margin-left: 5px;
+        display: inline-block;
+
+      }
+      a {
+        text-decoration: none;
+        color: #1b1b1a;
+        font-size: 24px;
+        &:hover {
+          color:  #e2e2e2;
+        }
+      }
+    }
+  }
+}
