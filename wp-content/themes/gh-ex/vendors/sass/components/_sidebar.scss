@@ -1,0 +1,94 @@
+.widget {
+  background-color: #004966;
+  margin-bottom: 25px;
+  padding: 0 30px 50px 30px;
+  h3 {
+    color: $white;
+    font: 700 30px Roboto;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+.widget_search, .elp-widget {
+  h3 {
+    padding-top: 35px;
+    margin-bottom: 35px;
+  }
+}
+
+.widget_categories {
+  h3 {
+    padding-top: 50px;
+    margin-bottom: 50px;
+  }
+  ul  {
+    li {
+      a {
+        color: $white;
+      }
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+  .nav>li>a:focus, .nav>li>a:hover {
+    background-color: transparent;
+    color: $white;
+  }
+}
+
+.search-field, .es_textbox_class {
+  border: 1px solid $white;
+  background-color: transparent;
+  outline: none;
+  width: 100%;
+  color: $white;
+  @include border-radius(0px);
+  &:focus {
+    outline: none;
+  }
+}
+
+.search {
+  &-submit {
+    display: none;
+  }
+  &-field {
+    padding: 24px 0 24px 20px;
+  }
+  &-form {
+    label {
+      width: 100%;
+    }
+  }
+}
+
+
+/* Newsletter  */
+
+.es_widget_form_email {
+  display: none;
+}
+
+.es_textbox_class {
+  padding: 15px 0 15px 20px;
+}
+
+.es_caption {
+  width: 60%;
+  margin-bottom: 30px;
+  color: $white;
+  font: 300 12px Roboto;
+}
+
+.es_textbox_button {
+  border: 1px solid $white;
+  background-color: #ff4848;
+  color: $white;
+  font: 700 24px Roboto;
+  text-transform: uppercase;
+  padding: 13px 0;
+  width: 100%;
+  margin-top: 40px;
+}
