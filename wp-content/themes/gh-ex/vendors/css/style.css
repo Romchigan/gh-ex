@@ -38,13 +38,12 @@
   align-items: center;
   min-height: 90px; }
   .site-header-banner {
-    min-height: 150px;
-    max-height: 200px;
+    min-height: 200px;
     width: 100%;
     opacity: 0.5; }
     .site-header-banner-wrap {
       background: #000;
-      height: 200px; }
+      min-height: 200px; }
   .site-header-inner {
     display: flex;
     justify-content: flex-start; }
@@ -86,6 +85,9 @@
   width: 100%;
   display: flex;
   justify-content: flex-end; }
+  @media only screen and (max-width: 780px) {
+    .navbar-default .navbar-nav {
+      display: block; } }
   .navbar-default .navbar-nav li {
     margin-left: 5px; }
     .navbar-default .navbar-nav li a {
@@ -103,18 +105,22 @@
   background-color: transparent; }
 
 .site-footer {
-  background-color: #000;
-  margin-top: 2%;
-  padding: 20px 0 5px 0; }
+  background-color: #ff4848;
+  padding: 25px 0 12px 0; }
   .site-footer-wrap {
     display: flex;
-    justify-content: space-between; }
+    justify-content: center; }
+
+.sub-footer {
+  background-color: #17212a;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .footer-copyright {
   color: #fff;
-  font: 700 12px Arial;
-  display: flex;
-  align-items: center; }
+  font: 700 12px Arial; }
 
 .footer-social {
   background-color: #e2e2e2;
@@ -140,6 +146,57 @@
       .footer-social-list a:hover {
         color: #e2e2e2; }
 
+.footer-contact {
+  background: #000;
+  height: auto; }
+  .footer-contact-us .container {
+    padding-top: 110px; }
+  .footer-contact-us-bg {
+    background: no-repeat url("http://dev-gh-ex-krasnikov.pantheonsite.io/wp-content/uploads/2017/04/image.png");
+    background-size: cover;
+    -webkit-background-size: cover; }
+  .footer-contact-heading {
+    color: #fff;
+    font: 300 36px/24px Roboto;
+    margin: 0 0 40px 0; }
+  .footer-contact-info {
+    margin: 0 0 30px 0; }
+  .footer-contact-phone {
+    position: relative;
+    padding-left: 30px; }
+    .footer-contact-phone:after {
+      content: "\f095";
+      font-family: FontAwesome;
+      position: absolute;
+      left: 0;
+      color: #fff;
+      font-size: 20px; }
+  .footer-contact-address {
+    margin: 25px 0 35px 0;
+    position: relative;
+    padding-left: 30px;
+    width: 270px; }
+    .footer-contact-address:after {
+      content: "\f041";
+      font-family: FontAwesome;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #fff;
+      font-size: 20px; }
+
+.footer-contact-info, .footer-contact-phone, .footer-contact-address {
+  color: #fff;
+  font: 300 18px/24px Roboto; }
+
+/* Footer form */
+.wpcf7-form .wpcf7-text, .wpcf7-form .wpcf7-textarea {
+  width: 100%;
+  outline: none;
+  padding: 16px;
+  margin-bottom: 20px;
+  border: none; }
+
 .btn-read-more {
   background-color: gray;
   color: #2c2c2b;
@@ -162,6 +219,25 @@
 .btn-contact-send {
   padding: 11px 55px 11px 12px;
   text-transform: uppercase; }
+
+.es_textbox_button {
+  border: 1px solid #fff;
+  background-color: #ff4848;
+  color: #fff;
+  font: 700 24px Roboto;
+  text-transform: uppercase;
+  padding: 13px 0;
+  width: 100%;
+  margin-top: 40px; }
+
+.wpcf7-submit {
+  background-color: #ff4848;
+  color: #fff;
+  font: 700 24px/24px Roboto;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 20px;
+  padding: 15px 60px; }
 
 .wrap-btn-social {
   display: flex;
@@ -276,16 +352,6 @@
   margin-bottom: 30px;
   color: #fff;
   font: 300 12px Roboto; }
-
-.es_textbox_button {
-  border: 1px solid #fff;
-  background-color: #ff4848;
-  color: #fff;
-  font: 700 24px Roboto;
-  text-transform: uppercase;
-  padding: 13px 0;
-  width: 100%;
-  margin-top: 40px; }
 
 .heading-block {
   color: #fff;

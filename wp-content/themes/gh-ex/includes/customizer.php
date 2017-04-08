@@ -40,7 +40,7 @@ function header_title_customize_register ($wp_customize) {
 
 add_action( 'customize_register', 'header_title_customize_register' );
 
-
+/* Header banner */
 function header_banner_customize_register ($wp_customize) {
     $wp_customize->add_section( 'header_banner' , array(
         'title'      => __( 'Header banner', '_tk' ),
@@ -93,88 +93,6 @@ function blog_customize_register ($wp_customize) {
 
 add_action( 'customize_register', 'blog_customize_register' );
 
-
-/* Footer social */
-function footer_social_customize_register ($wp_customize) {
-    $wp_customize->add_section( 'footer_social' , array(
-        'title'      => __( 'Footer social icons', '_tk' ),
-        'priority'   => 30,
-    ) );
-
-
-    $wp_customize->add_setting( 'footer_facebook_settings' , array(
-        'default'   => '',
-        'transport' => 'refresh',
-    ) );
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'footer_facebook_control', array(
-        'label'      => __( 'Add your facebook link', '_tk' ),
-        'section'    => 'footer_social',
-        'settings'   => 'footer_facebook_settings',
-    ) ) );
-
-    $wp_customize->add_setting( 'facebook_checkbox_settings' , array(
-        'default'   => true,
-        'transport' => 'refresh',
-    ) );
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'facebook_checkbox_control', array(
-        'label'      => __( 'Show facebook link', '_tk' ),
-        'section'    => 'footer_social',
-        'settings'   => 'facebook_checkbox_settings',
-				'type'			 => 'checkbox'
-    ) ) );
-
-
-
-    $wp_customize->add_setting( 'footer_twitter_settings' , array(
-        'default'   => '',
-        'transport' => 'refresh',
-    ) );
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'footer_twitter_control', array(
-        'label'      => __( 'Add your twitter link', '_tk' ),
-        'section'    => 'footer_social',
-        'settings'   => 'footer_twitter_settings',
-    ) ) );
-
-    $wp_customize->add_setting( 'twitter_checkbox_settings' , array(
-        'default'   => true,
-        'transport' => 'refresh',
-    ) );
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'twitter_checkbox_control', array(
-        'label'      => __( 'Show twitter link', '_tk' ),
-        'section'    => 'footer_social',
-        'settings'   => 'twitter_checkbox_settings',
-        'type'			 => 'checkbox'
-    ) ) );
-
-
-
-    $wp_customize->add_setting( 'footer_linkedin_settings' , array(
-        'default'   => '',
-        'transport' => 'refresh',
-    ) );
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'footer_linkedin_control', array(
-        'label'      => __( 'Add your linkedin link', '_tk' ),
-        'section'    => 'footer_social',
-        'settings'   => 'footer_linkedin_settings',
-    ) ) );
-
-    $wp_customize->add_setting( 'linkedin_checkbox_settings' , array(
-        'default'   => true,
-        'transport' => 'refresh',
-    ) );
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'linkedin_checkbox_control', array(
-        'label'      => __( 'Show linkedin link', '_tk' ),
-        'section'    => 'footer_social',
-        'settings'   => 'linkedin_checkbox_settings',
-        'type'			 => 'checkbox'
-    ) ) );
-
-}
-
-add_action( 'customize_register', 'footer_social_customize_register' );
-
-
-
 /* Background color site*/
 function background_site_customize_register ($wp_customize) {
     $wp_customize->add_section( 'color_site' , array(
@@ -197,14 +115,101 @@ function background_site_customize_register ($wp_customize) {
 
 add_action( 'customize_register', 'background_site_customize_register' );
 
+/* Footer */
+function footer_info_customize_register ($wp_customize) {
+    $wp_customize->add_section( 'footer_info' , array(
+        'title'      => __( 'Footer info', '_tk' ),
+        'priority'   => 30,
+    ) );
+
+    $wp_customize->add_setting( 'footer_ifo_settings' , array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'footer_ifo_control', array(
+        'label'      => __( 'Add your footer text', '_tk' ),
+        'section'    => 'footer_info',
+        'settings'   => 'footer_ifo_settings',
+    ) ) );
+
+
+
+    $wp_customize->add_setting( 'sub_footer_logo_settings' , array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'sub_footer_logo_control', array(
+        'label'      => __( 'Add your sub-footer logo', '_tk' ),
+        'section'    => 'footer_info',
+        'settings'   => 'sub_footer_logo_settings',
+    ) ) );
+
+
+
+    $wp_customize->add_setting( 'footer_contact_banner_settings' , array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'footer_contact_banner_control', array(
+        'label'      => __( 'Add your footer contact banner', '_tk' ),
+        'section'    => 'footer_info',
+        'settings'   => 'footer_contact_banner_settings',
+    ) ) );
+
+
+
+
+    $wp_customize->add_setting( 'footer_contact_heading_settings' , array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'footer_contact_heading_control', array(
+        'label'      => __( 'Add your contact heading', '_tk' ),
+        'section'    => 'footer_info',
+        'settings'   => 'footer_contact_heading_settings',
+    ) ) );
+
+
+
+    $wp_customize->add_setting( 'footer_contact_info_settings' , array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'footer_contact_info_control', array(
+        'label'      => __( 'Add your contact info', '_tk' ),
+        'section'    => 'footer_info',
+        'settings'   => 'footer_contact_info_settings',
+    ) ) );
+
+
+    $wp_customize->add_setting( 'footer_contact_phone_settings' , array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'footer_contact_phone_control', array(
+        'label'      => __( 'Add your contact phone', '_tk' ),
+        'section'    => 'footer_info',
+        'settings'   => 'footer_contact_phone_settings',
+    ) ) );
+
+
+    $wp_customize->add_setting( 'footer_contact_address_settings' , array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'footer_contact_address_control', array(
+        'label'      => __( 'Add your contact address', '_tk' ),
+        'section'    => 'footer_info',
+        'settings'   => 'footer_contact_address_settings',
+    ) ) );
+
+}
+add_action( 'customize_register', 'footer_info_customize_register' );
+
 
 /*Output Customize CSS*/
 function blog_customize_css() { ?>
     <style type="text/css">
-        .widget_recent_entries .nav>li>a:focus,
-        .widget_recent_entries .nav>li>a:hover, .btn-read-more,  .contact-sidebar-phone, .contact-sidebar-email, .btn-contact-send {
-            background-color: <?php echo get_theme_mod( 'color_site_settings' ); ?>;
-        }
         .navbar-default .navbar-nav>.active>a:before {
             background-color: <?php echo get_theme_mod( 'color_site_settings' ); ?>;
         }

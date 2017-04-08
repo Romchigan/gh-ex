@@ -23,3 +23,24 @@
   padding: 11px 55px 11px 12px;
   text-transform: uppercase;
 }
+
+.es_textbox_button {
+  border: 1px solid $white;
+  background-color: #ff4848;
+  color: $white;
+  font: 700 24px Roboto;
+  text-transform: uppercase;
+  padding: 13px 0;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.wpcf7-submit {
+  background-color: #ff4848;
+  color: $white;
+  font: 700 24px/24px Roboto;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 20px;
+  padding: 15px 60px;
+}
