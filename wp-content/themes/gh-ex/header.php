@@ -24,36 +24,17 @@
 <body class="background-site" <?php body_class(); ?>>
 	<?php do_action( 'before' ); ?>
 
-	<div class="site-header-banner-wrap">
-		<img src="<?php echo get_theme_mod('header_banner_settings'); ?>" alt="header-banner" class="img-fluid site-header-banner">
-	</div>
-	<div class="container">
+
+	<div class="container-fluid">
 		<div class="row">
 			<div class="col-xl-12">
 				<header id="masthead" class="site-header" role="banner">
             <?php // substitute the class "container-fluid" below if you want a wider content area ?>
-					<div class="container">
+					<div class="container pb-0">
 						<div class="row">
-							<div class="site-header-inner col-sm-12">
-								<div class="site-branding">
-									<h1 class="site-title text-uppercase">
-										<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                        <?php bloginfo( 'name' ); ?>
-										</a>
-									</h1>
-									<div class="site-header-search-wrap">
-										<form action="page-blog.php" method="post" class="site-search-form">
-											<label for="search">
-												<input id="search" type="search" class="site-header-search" placeholder="Search">
-											</label>
-											<input type="submit" class="site-header-search-submit">
-										</form>
-									</div>
-								</div>
-							</div>
 							<nav class="site-navigation">
                   <?php // substitute the class "container-fluid" below if you want a wider content area ?>
-								<div class="container">
+								<div class="container pb-0">
 									<div class="row">
 										<div class="site-navigation-inner col-sm-12">
 											<div class="navbar navbar-default d-flex align-items-center">
@@ -65,8 +46,8 @@
 														<span class="icon-bar"></span>
 													</button>
 												</div>
-												<a class="navbar-brand" href="#">
-													<img src="<?php header_image(); ?>" alt="logo" class="logo-header img-fluid" width="150px">
+												<a class="navbar-brand" href="<?php echo get_site_url(); ?>" >
+													<img src="<?php header_image(); ?>"  alt="logo" class="logo-header img-fluid" width="127px">
 												</a>
 												<!-- The WordPress Menu goes here -->
                           <?php wp_nav_menu(
@@ -93,6 +74,12 @@
 			</div>
 		</div>
 	</div>
+	<div class="site-header-banner-wrap">
+		<img src="<?php echo get_theme_mod('header_banner_settings'); ?>" alt="header-banner" class="img-fluid site-header-banner">
+		<h2 class="title-header"><?php the_title(); ?></h2>
+	</div>
+
+
 
 
 <div class="main-content">

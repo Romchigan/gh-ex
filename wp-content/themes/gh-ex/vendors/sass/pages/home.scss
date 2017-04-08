@@ -1,0 +1,109 @@
+.main-back-section {
+  background-color: #ff4848;
+  padding-bottom: 140px;
+  .container {
+    padding-left: 30px;
+  }
+}
+
+.image-red-section {
+  margin-top: 100px;
+}
+
+.info-start-section-wrap {
+  padding-top: 180px;
+}
+
+.heading-red-section {
+  font: 700 60px Roboto;
+  color: $white;
+  margin: 0 0 40px 0;
+}
+
+.heading-red-section-two {
+  color: #2c3e50;
+}
+
+.sub-heading-red-section {
+  font: 400 48px Roboto;
+  color: $white;
+  margin: 0;
+}
+
+.data-red-section {
+  font: 400 30px Roboto;
+  color: $white;
+  margin: 0;
+}
+
+.info-red-section {
+  color: $white;
+  font: 300 24px Roboto;
+  margin: 40px 0 0 0;
+}
+
+.welcome-section {
+  .container {
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
+}
+
+.heading-welcome-section {
+  color: #004966;
+  font: 700 36px Roboto;
+  margin: 0 0 50px 0;
+}
+
+.info-welcome-section {
+  font: 700 18px/24px Roboto;
+  color: #004966;
+  padding-bottom: 40px;
+}
+
+.wrap-info-welcome-section {
+  padding-top: 100px;
+}
+
+
+.offering-section-heading {
+  color: $white;
+  font: 300 36px/24px Roboto;
+  margin: 0 0 30px 0;
+}
+
+.offering-section-sub-heading {
+  color: $white;
+  font: 400 18px/24px Roboto;
+}
+
+.offering-section-wrap-info {
+  padding-bottom: 100px;
+}
+
+.offering-section {
+  background-color: #004966;
+  .container {
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
+}
+
+.offering-section-wrap-info {
+  text-align: center;
+}
+
+.clients-section {
+  background-color: #ff4848;
+}
+
+.offering-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  li {
+    list-style-type: none;
+  }
+}

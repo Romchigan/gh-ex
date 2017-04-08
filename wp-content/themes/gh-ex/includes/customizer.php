@@ -51,7 +51,6 @@ function header_banner_customize_register ($wp_customize) {
         'default'   => '',
         'transport' => 'refresh',
     ) );
-
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'header_banner_control', array(
         'label'      => __( 'Add your banner', '_tk' ),
         'section'    => 'header_banner',
@@ -92,6 +91,145 @@ function blog_customize_register ($wp_customize) {
 }
 
 add_action( 'customize_register', 'blog_customize_register' );
+
+/* Home start section */
+function home_start_section_customize_register ($wp_customize) {
+    $wp_customize->add_section( 'home_red_section' , array(
+        'title'      => __( 'Home start section', '_tk' ),
+        'priority'   => 30,
+    ) );
+
+    $wp_customize->add_setting( 'image_red_section_settings' , array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'image_red_section_control', array(
+        'label'      => __( 'Add your image in red section', '_tk' ),
+        'section'    => 'home_red_section',
+        'settings'   => 'image_red_section_settings',
+    ) ) );
+
+
+    $wp_customize->add_setting( 'heading_red_section_settings' , array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'heading_red_section_control', array(
+        'label'      => __( 'Add your heading in red section', '_tk' ),
+        'section'    => 'home_red_section',
+        'settings'   => 'heading_red_section_settings',
+    ) ) );
+
+
+    $wp_customize->add_setting( 'sub_heading_red_section_settings' , array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sub_heading_red_section_control', array(
+        'label'      => __( 'Add your sub-heading in red section', '_tk' ),
+        'section'    => 'home_red_section',
+        'settings'   => 'sub_heading_red_section_settings',
+    ) ) );
+
+
+    $wp_customize->add_setting( 'data_red_section_settings' , array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'data_red_section_control', array(
+        'label'      => __( 'Add your data in red section', '_tk' ),
+        'section'    => 'home_red_section',
+        'settings'   => 'data_red_section_settings',
+    ) ) );
+
+    $wp_customize->add_setting( 'info_red_section_settings' , array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'info_red_section_control', array(
+        'label'      => __( 'Add your info in red section', '_tk' ),
+        'section'    => 'home_red_section',
+        'settings'   => 'info_red_section_settings',
+    ) ) );
+
+}
+add_action( 'customize_register', 'home_start_section_customize_register' );
+
+/* Welcome section*/
+function welcome_section_customize_register ($wp_customize) {
+    $wp_customize->add_section( 'welcome_section' , array(
+        'title'      => __( 'Welcome section', '_tk' ),
+        'priority'   => 30,
+    ) );
+
+
+    $wp_customize->add_setting( 'image_welcome_section_settings' , array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'image_welcome_section_control', array(
+        'label'      => __( 'Add image into welcome section', '_tk' ),
+        'section'    => 'welcome_section',
+        'settings'   => 'image_welcome_section_settings',
+    ) ) );
+
+
+    $wp_customize->add_setting( 'heading_welcome_section_settings' , array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'heading_welcome_section_control', array(
+        'label'      => __( 'Add heading welcome section', '_tk' ),
+        'section'    => 'welcome_section',
+        'settings'   => 'heading_welcome_section_settings',
+    ) ) );
+
+    $wp_customize->add_setting( 'info_welcome_section_settings' , array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'info_welcome_section_control', array(
+        'label'      => __( 'Add info welcome section', '_tk' ),
+        'section'    => 'welcome_section',
+        'settings'   => 'info_welcome_section_settings',
+    ) ) );
+}
+
+add_action( 'customize_register', 'welcome_section_customize_register' );
+
+
+/* Offering section*/
+function offering_section_customize_register ($wp_customize)
+{
+    $wp_customize->add_section('offering_section', array(
+        'title' => __('Offering section', '_tk'),
+        'priority' => 30,
+    ));
+
+
+    $wp_customize->add_setting('heading_offering_section_settings', array(
+        'default' => '',
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'head_offering_section_control', array(
+        'label' => __('Add heading offering section', '_tk'),
+        'section' => 'offering_section',
+        'settings' => 'heading_offering_section_settings',
+    )));
+
+
+    $wp_customize->add_setting('info_offering_section_settings', array(
+        'default' => '',
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'info_offering_section_control', array(
+        'label' => __('Add info offering section', '_tk'),
+        'section' => 'offering_section',
+        'settings' => 'info_offering_section_settings',
+    )));
+}
+add_action( 'customize_register', 'offering_section_customize_register' );
+
 
 /* Background color site*/
 function background_site_customize_register ($wp_customize) {

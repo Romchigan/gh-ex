@@ -11,6 +11,7 @@
       &-wrap {
         background: $black;
         min-height: 200px;
+        position: relative;
       }
     }
     &-inner {
@@ -26,7 +27,6 @@
       color: $black;
     }
     &-heading {
-      color: $yellow;
       font-weight: 100;
       font-size: 28px;
     }
@@ -73,6 +73,9 @@
       &:hover {
         color: #ff4848;
       }
+      &:focus {
+        color: #ff4848;
+      }
     }
   }
 }
@@ -82,4 +85,13 @@
   font: 400 16px Roboto;
   text-transform: uppercase;
   background-color: transparent;
+}
+
+.title-header {
+  color: $white;
+  font: 700 30px Roboto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
