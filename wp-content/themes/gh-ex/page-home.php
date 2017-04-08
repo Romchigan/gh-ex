@@ -51,7 +51,7 @@ get_header('home'); ?>
 						<h2 class="offering-section-heading"><?php echo get_theme_mod('heading_offering_section_settings');?></h2>
 						<p class="offering-section-sub-heading"><?php echo get_theme_mod('info_offering_section_settings');?></p>
 					</div>
-					<div class="offering-list pl-0 mb-0">
+					<div class="offering-list">
               <?php $loop = new WP_Query( array( 'post_type' => 'offering', 'posts_per_page' => 3 ) ); ?>
               <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 								<div class="col-sm-4">
