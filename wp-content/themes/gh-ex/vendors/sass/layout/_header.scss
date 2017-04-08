@@ -5,13 +5,12 @@
     align-items: center;
     min-height: 90px;
     &-banner {
-      min-height: 150px;
-      max-height: 200px;
+      min-height: 200px;
       width: 100%;
       opacity: 0.5;
       &-wrap {
         background: $black;
-        height: 200px;
+        min-height: 200px;
       }
     }
     &-inner {
@@ -61,6 +60,9 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  @media only screen and (max-width: 780px){
+    display: block;
+  }
   li {
     margin-left: 5px;
     a {
