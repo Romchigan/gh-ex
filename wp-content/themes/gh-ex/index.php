@@ -13,6 +13,7 @@
 
 get_header(); ?>
 	<div id="content" class="main-content-inner col-sm-12 col-md-8">
+
 	<?php if ( have_posts() ) : ?>
 
 		<?php /* Start the Loop */ ?>
@@ -45,7 +46,7 @@ get_header(); ?>
 		'add_fragment' => '',
 		'screen_reader_text' => false,
 	); ?>
-	<nav class="pagination-links text-right">
+	<nav class="pagination-links text-left">
 		<?php echo paginate_links($args); ?>
 	</nav>
 

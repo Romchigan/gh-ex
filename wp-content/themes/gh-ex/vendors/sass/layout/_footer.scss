@@ -59,14 +59,25 @@
     &-us {
       .container {
         padding-top: 110px;
+        z-index: 5;
+        position: relative;
       }
-     // background: $black;
-     // height:100%;
       &-bg {
         background: no-repeat url("http://dev-gh-ex-krasnikov.pantheonsite.io/wp-content/uploads/2017/04/image.png");
         background-size: cover;
         -webkit-background-size: cover;
-       // opacity: 0.5;
+        position: relative;
+       &::before{
+         content: "";
+         position: absolute;
+         top: 0;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         background-color: $black;
+         opacity: 0.6;
+         z-index: 2;
+       }
       }
     }
     &-heading {

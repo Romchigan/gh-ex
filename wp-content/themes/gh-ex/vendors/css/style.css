@@ -43,7 +43,8 @@
     opacity: 0.5; }
     .site-header-banner-wrap {
       background: #000;
-      min-height: 200px; }
+      min-height: 200px;
+      position: relative; }
   .site-header-inner {
     display: flex;
     justify-content: flex-start; }
@@ -104,6 +105,14 @@
   text-transform: uppercase;
   background-color: transparent; }
 
+.title-header {
+  color: #fff;
+  font: 700 30px Roboto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
 .site-footer {
   background-color: #ff4848;
   padding: 25px 0 12px 0; }
@@ -150,11 +159,24 @@
   background: #000;
   height: auto; }
   .footer-contact-us .container {
-    padding-top: 110px; }
+    padding-top: 110px;
+    z-index: 5;
+    position: relative; }
   .footer-contact-us-bg {
     background: no-repeat url("http://dev-gh-ex-krasnikov.pantheonsite.io/wp-content/uploads/2017/04/image.png");
     background-size: cover;
-    -webkit-background-size: cover; }
+    -webkit-background-size: cover;
+    position: relative; }
+    .footer-contact-us-bg::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #000;
+      opacity: 0.6;
+      z-index: 2; }
   .footer-contact-heading {
     color: #fff;
     font: 300 36px/24px Roboto;
@@ -238,57 +260,6 @@
   border: none;
   margin-top: 20px;
   padding: 15px 60px; }
-
-.wrap-btn-social {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  color: #585858;
-  font: 14px/28px OpenSans;
-  font-weight: 400;
-  text-transform: uppercase;
-  padding-left: 15px; }
-  .wrap-btn-social .social .smGlobalBtn {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    padding: 0;
-    text-decoration: none;
-    text-align: center;
-    color: #fff;
-    font-size: 25px;
-    font-weight: normal;
-    line-height: 2em;
-    border-radius: 25px;
-    -moz-border-radius: 25px;
-    -webkit-border-radius: 25px;
-    margin-left: 10px; }
-  .wrap-btn-social .social .facebookBtn {
-    background: #4060A5; }
-    .wrap-btn-social .social .facebookBtn:before {
-      font-family: "FontAwesome";
-      content: "\f09a"; }
-    .wrap-btn-social .social .facebookBtn:hover {
-      color: #4060A5;
-      background: #fff; }
-  .wrap-btn-social .social .twitterBtn {
-    background: #00ABE3; }
-    .wrap-btn-social .social .twitterBtn:before {
-      font-family: "FontAwesome";
-      content: "\f099"; }
-    .wrap-btn-social .social .twitterBtn:hover {
-      color: #00ABE3;
-      background: #fff; }
-  .wrap-btn-social .social .googleplusBtn {
-    background: #e64522; }
-    .wrap-btn-social .social .googleplusBtn:before {
-      font-family: "FontAwesome";
-      content: "\f0d5"; }
-    .wrap-btn-social .social .googleplusBtn:hover {
-      color: #e64522;
-      background: #fff; }
 
 .widget {
   background-color: #004966;
@@ -460,61 +431,92 @@
   -o-background-image: -o-linear-gradient(-45deg, transparent 46%, #a6a6a4 49%, #a6a6a4 51%, transparent 55%);
   background-image: linear-gradient(-45deg, transparent 46%, #a6a6a4 49%, #a6a6a4 51%, transparent 55%); }
 
-.blog-post-title a {
-  text-decoration: none;
-  color: #222; }
+.blog-post-title {
+  font-size: 20px;
+  padding: 0 15px 0 15px; }
+  .blog-post-title a {
+    text-decoration: none;
+    color: #222; }
+
+.blog-post-content {
+  width: 100%; }
 
 .type-post {
   margin-bottom: 50px;
   padding-bottom: 25px;
   border-bottom: 5px solid  #e7e7e7; }
 
-/* Info-blog */
-.info-blog-list {
-  list-style-type: none; }
-  .info-blog-list li {
+.main-content-inner article {
+  padding-right: 30px;
+  margin-bottom: 25px; }
+  .main-content-inner article img {
+    width: 100%; }
+
+.main-content-inner {
+  padding-top: 70px; }
+
+.sidebar {
+  padding-top: 50px; }
+
+.info-post {
+  border: 1px solid rgba(0, 1, 1, 0.5);
+  position: relative; }
+  .info-post:before {
+    content: "\f18e";
+    position: absolute;
+    font-family: FontAwesome;
+    top: 0;
+    right: 7px;
+    font-size: 35px;
     color: #000;
-    font: 700 12px/24px Arial;
-    margin-right: 8px;
-    position: relative;
-    padding: 0 10px 0 30px; }
+    z-index: 5; }
+  .info-post:hover:before {
+    color: #ff4848; }
+  .info-post:hover .blog-post-title a {
+    color: #ff4848; }
+  .info-post:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 46px;
+    height: 46px;
+    background-color: #fff; }
 
-.info-blog-item-comments:after {
-  content: "\f075";
-  font-family: FontAwesome;
-  color: #a09e9e;
-  position: absolute;
-  top: 0;
-  left: 10px; }
+.blog-post-content {
+  color: #000;
+  font: 900 9px Roboto;
+  border-bottom: 1px solid rgba(0, 0, 2, 0.5);
+  padding: 0 20px 0 15px; }
 
-.info-blog-item-categories ul {
-  list-style-type: none;
-  padding-left: 0; }
-  .info-blog-item-categories ul li {
-    padding: 0; }
-  .info-blog-item-categories ul li a {
-    text-decoration: none;
+.entry-meta {
+  padding: 15px 0;
+  text-align: center; }
+
+.post-date {
+  position: relative; }
+  .post-date:after {
+    content: "\f017";
+    font-family: FontAwesome;
+    position: absolute;
+    left: 100px;
+    top: -6px;
+    font-size: 22px;
     color: #000; }
 
-.info-blog-item-categories:after {
-  content: "\f07c";
-  font-family: FontAwesome;
-  color: #a09e9e;
-  position: absolute;
-  top: 0;
-  left: 10px; }
-
-.pagination-links .page-numbers {
-  font: 400 13px/24px Arial;
-  opacity: 0.84;
-  padding: 4px 8px;
-  text-decoration: none;
-  background-color: #e2e2e2;
-  color: #222; }
-  .pagination-links .page-numbers:hover {
-    background-color: #222222;
-    color: #fff; }
-
-.pagination-links .current {
-  background-color: #222222;
-  color: #fff; }
+.pagination-links {
+  margin: 50px 0 70px;
+  display: inline-block; }
+  .pagination-links .page-numbers {
+    opacity: 0.84;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #ff4848;
+    color: #fff;
+    font: 700 24px Roboto; }
+    .pagination-links .page-numbers:hover {
+      background-color: #ff4848;
+      color: #171717; }
+  .pagination-links .current {
+    background-color: #ff4848;
+    color: #171717; }
