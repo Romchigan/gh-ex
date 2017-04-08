@@ -33,12 +33,21 @@
   padding-left: 0 !important; }
 
 .site-header {
-  position: absolute;
-  top: 10%; }
+  background-color: #2c3e50;
+  display: flex;
+  align-items: center;
+  min-height: 90px; }
   .site-header-banner {
-    min-height: 300px;
-    max-height: 600px;
-    width: 100%; }
+    min-height: 150px;
+    max-height: 200px;
+    width: 100%;
+    opacity: 0.5; }
+    .site-header-banner-wrap {
+      background: #000;
+      height: 200px; }
+  .site-header-inner {
+    display: flex;
+    justify-content: flex-start; }
 
 .site-title {
   font-size: 24px;
@@ -55,10 +64,8 @@
     font-weight: 700;
     font-size: 30px; }
 
-.site-branding {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end; }
+.navbar-brand {
+  margin-bottom: 2%; }
 
 .navbar-default {
   display: flex;
@@ -66,28 +73,32 @@
   background-color: transparent;
   border: none;
   margin-bottom: 0;
+  justify-content: space-between;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   border-radius: 0; }
   .navbar-default .navbar-collapse {
-    width: 100%; }
+    width: 100%;
+    padding-right: 0; }
 
 .navbar-default .navbar-nav {
-  width: 100%; }
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; }
   .navbar-default .navbar-nav li {
     margin-left: 5px; }
     .navbar-default .navbar-nav li a {
       color: #fff;
-      font: 400 15px Oswald;
+      font: 400 16px Roboto;
       text-transform: uppercase;
       padding: 3px 16px; }
       .navbar-default .navbar-nav li a:hover {
-        color: red; }
+        color: #ff4848; }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
   color: red;
-  font: 400 15px Oswald;
+  font: 400 16px Roboto;
   text-transform: uppercase;
   background-color: transparent; }
 
@@ -202,6 +213,16 @@
     .wrap-btn-social .social .googleplusBtn:hover {
       color: #e64522;
       background: #fff; }
+
+.widget {
+  background-color: #004966;
+  margin-bottom: 25px; }
+  .widget h3 {
+    color: #fff;
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase; }
 
 .heading-block {
   color: #fff;

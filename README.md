@@ -4,7 +4,7 @@
 http://dev-gh-ex-krasnikov.pantheonsite.io
 
 ### Wordpress settings
-login: romchigan
+login: admin
 
 pass: admin
 
